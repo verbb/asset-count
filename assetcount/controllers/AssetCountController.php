@@ -6,6 +6,8 @@ namespace Craft;
  */
 class AssetCountController extends BaseController
 {
+    protected $allowAnonymous = array('actionCount');
+    
     /**
      * Reset count
      */
