@@ -1,0 +1,12 @@
+{
+    "name": "engram-design/AssetCount",
+    "description": "A Craft CMS plugin to track the number of views for assets.",
+    "authors": [{
+        "name": "S. Group",
+        "email": "joshua@sgroup.com.au"
+	}],
+    "type": "craft-plugin",
+    "require": {
+        "composer/installers": "~1.0"
+    }
+}
