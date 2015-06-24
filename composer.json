@@ -1,11 +1,15 @@
 {
-    "name": "engram-design/AssetCount",
+    "name": "engram-design/assetcount",
     "description": "A Craft CMS plugin to track the number of views for assets.",
+    "homepage": "https://github.com/engram-design/AssetCount",
+    "type": "craft-plugin",
+    "keywords": ["craft","plugin"],
+    "license": "MIT",
     "authors": [{
         "name": "S. Group",
         "email": "joshua@sgroup.com.au"
+        "homepage": "http://sgroup.com.au/",
 	}],
-    "type": "craft-plugin",
     "require": {
         "composer/installers": "~1.0"
     }
