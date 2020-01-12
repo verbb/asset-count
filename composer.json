@@ -1,16 +1,43 @@
 {
-    "name": "engram-design/assetcount",
-    "description": "A Craft CMS plugin to track the number of views for assets.",
-    "homepage": "https://github.com/engram-design/AssetCount",
+    "name": "verbb/asset-count",
+    "description": "Track the number of views for assets.",
     "type": "craft-plugin",
-    "keywords": ["craft","plugin"],
+    "version": "1.0.0",
+    "keywords": [
+        "craft",
+        "cms",
+        "craftcms",
+        "craft-plugin",
+        "assets",
+        "views",
+        "count"
+    ],
+    "support": {
+        "email": "support@verbb.io",
+        "issues": "https://github.com/verbb/asset-count/issues?state=open",
+        "source": "https://github.com/verbb/asset-count",
+        "docs": "https://github.com/verbb/asset-count",
+        "rss": "https://github.com/verbb/asset-count/commits/v2.atom"
+    },
     "license": "MIT",
-    "authors": [{
-        "name": "S. Group",
-        "email": "joshua@sgroup.com.au",
-        "homepage": "http://sgroup.com.au/"
-	}],
+    "authors": [
+        {
+            "name": "Verbb",
+            "homepage": "https://verbb.io"
+        }
+    ],
     "require": {
-        "composer/installers": "~1.0"
+        "craftcms/cms": "^3.0.0"
+    },
+    "autoload": {
+        "psr-4": {
+          "verbb\\assetcount\\": "src/"
+        }
+    },
+    "extra": {
+        "name": "Asset Count",
+        "handle": "asset-count",
+        "changelogUrl": "https://raw.githubusercontent.com/verbb/asset-count/craft-3/CHANGELOG.md",
+        "class": "verbb\\assetcount\\AssetCount"
     }
 }
