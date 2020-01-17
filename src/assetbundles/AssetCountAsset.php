@@ -5,6 +5,8 @@ use Craft;
 use craft\web\AssetBundle;
 use craft\web\assets\cp\CpAsset;
 
+use verbb\base\assetbundles\CpAsset as VerbbCpAsset;
+
 class AssetCountAsset extends AssetBundle
 {
     // Public Methods
@@ -15,11 +17,8 @@ class AssetCountAsset extends AssetBundle
         $this->sourcePath = "@verbb/assetcount/resources/dist";
 
         $this->depends = [
+            VerbbCpAsset::class,
             CpAsset::class,
-        ];
-
-        $this->css = [
-            'css/asset-count.css',
         ];
 
         parent::init();
