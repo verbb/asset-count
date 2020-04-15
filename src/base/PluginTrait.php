@@ -5,7 +5,6 @@ use verbb\assetcount\AssetCount;
 use verbb\assetcount\services\Service;
 
 use Craft;
-use craft\log\FileTarget;
 
 use yii\log\Logger;
 
@@ -52,10 +51,7 @@ trait PluginTrait
 
     private function _setLogging()
     {
-        Craft::getLogger()->dispatcher->targets[] = new FileTarget([
-            'logFile' => Craft::getAlias('@storage/logs/asset-count.log'),
-            'categories' => ['asset-count'],
-        ]);
+        BaseHelper::setFileLogging('asset-count');
     }
 
 }
