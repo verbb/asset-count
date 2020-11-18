@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.0.3 - 2020-11-18
+
+### Fixed
+- Fix plugin settings not saving correctly.
+
 ## 1.0.2 - 2020-04-16
 
 ### Fixed
