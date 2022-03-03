@@ -8,17 +8,17 @@ class AssetCountModel extends Model
     // Public Properties
     // =========================================================================
 
-    public $id;
-    public $assetId;
-    public $count = 0;
-    public $dateCreated;
-    public $dateUpdated;
+    public ?string $id = null;
+    public ?string $assetId = null;
+    public int $count = 0;
+    public ?DateTIme $dateCreated = null;
+    public ?DateTIme $dateUpdated = null;
 
 
     // Public Methods
     // =========================================================================
 
-    public function __toString()
+    public function __toString(): string
     {
         return (string)$this->count;
     }

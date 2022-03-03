@@ -8,8 +8,8 @@ class Settings extends Model
     // Public Properties
     // =========================================================================
 
-    public $showCountOnAssetIndex = true;
-    public $ignoreLoggedInUsers = false;
-    public $ignoreIpAddresses;
+    public bool $showCountOnAssetIndex = true;
+    public bool $ignoreLoggedInUsers = false;
+    public bool $ignoreIpAddresses = false;
 
 }

@@ -10,6 +10,7 @@ use verbb\assetcount\controllers\DefaultController;
 
 use Craft;
 use craft\base\Element;
+use craft\base\Model;
 use craft\base\Plugin;
 use craft\elements\Asset;
 use craft\events\RegisterElementActionsEvent;
@@ -27,8 +28,8 @@ class AssetCount extends Plugin
     // Public Properties
     // =========================================================================
 
-    public $schemaVersion = '1.0.0';
-    public $hasCpSettings = true;
+    public string $schemaVersion = '1.0.0';
+    public bool $hasCpSettings = true;
 
 
     // Traits
@@ -40,7 +41,7 @@ class AssetCount extends Plugin
     // Public Methods
     // =========================================================================
 
-    public function init()
+    public function init(): void
     {
         parent::init();
 
@@ -54,16 +55,16 @@ class AssetCount extends Plugin
         $this->_registerEventHandlers();
     }
 
-    public function getSettingsResponse()
+    public function getSettingsResponse(): mixed
     {
-        Craft::$app->getResponse()->redirect(UrlHelper::cpUrl('asset-count/settings'));
+        return Craft::$app->getResponse()->redirect(UrlHelper::cpUrl('asset-count/settings'));
     }
 
 
     // Protected Methods
     // =========================================================================
 
-    protected function createSettingsModel(): Settings
+    protected function createSettingsModel(): ?Model
     {
         return new Settings();
     }
@@ -72,19 +73,19 @@ class AssetCount extends Plugin
     // Private Methods
     // =========================================================================
 
-    private function _registerTwigExtensions()
+    private function _registerTwigExtensions(): void
     {
         Craft::$app->view->registerTwigExtension(new Extension);
     }
 
-    private function _registerVariable()
+    private function _registerVariable(): void 
     {
         Event::on(CraftVariable::class, CraftVariable::EVENT_INIT, function(Event $event) {
             $event->sender->set('assetCount', AssetCountVariable::class);
         });
     }
 
-    private function _registerCpRoutes()
+    private function _registerCpRoutes(): void
     {
         Event::on(UrlManager::class, UrlManager::EVENT_REGISTER_CP_URL_RULES, function(RegisterUrlRulesEvent $event) {
             $event->rules = array_merge($event->rules, [
@@ -93,7 +94,7 @@ class AssetCount extends Plugin
         });
     }
 
-    private function _registerEventHandlers()
+    private function _registerEventHandlers(): void
     {
         $settings = $this->getSettings();
 

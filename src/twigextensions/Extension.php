@@ -5,11 +5,11 @@ use Craft;
 use craft\elements\Asset;
 use craft\helpers\UrlHelper;
 
-use Twig_Extension;
-use Twig_SimpleFunction;
-use Twig_SimpleFilter;
+use Twig\Extension\AbstractExtension;
+use Twig\TwigFilter;
+use Twig\TwigFunction;
 
-class Extension extends Twig_Extension
+class Extension extends AbstractExtension
 {
     // Public Methods
     // =========================================================================
@@ -19,26 +19,32 @@ class Extension extends Twig_Extension
         return 'Asset Count';
     }
 
+    /**
+     * @return \Twig\TwigFilter[]
+     */
     public function getFilters(): array
     {
         return [
-            new Twig_SimpleFilter('asset_count', [$this, 'getAssetCountUrl']),
+            new TwigFilter('asset_count', fn($asset): string => $this->getAssetCountUrl($asset)),
         ];
     }
 
+    /**
+     * @return \Twig\TwigFunction[]
+     */
     public function getFunctions(): array
     {
         return [
-            new Twig_SimpleFunction('asset_count', [$this, 'getAssetCountUrl']),
+            new TwigFunction('asset_count', fn($asset): string => $this->getAssetCountUrl($asset)),
         ];
     }
 
-    public function getAssetCountUrl($asset)
+    public function getAssetCountUrl($asset): string
     {
-        if (!$asset || !is_a($asset, Asset::class) || !$asset->url) {
+        if (!$asset || !is_a($asset, Asset::class) || !$asset->getUrl()) {
             return '';
         }
 
-        return UrlHelper::actionUrl('asset-count/count', ['id' => $asset->id]);
+        return UrlHelper::actionUrl('asset-count/count', ['id' => $asset->getId()]);
     }
 }

@@ -2,7 +2,7 @@
     "name": "verbb/asset-count",
     "description": "Track the number of views for assets.",
     "type": "craft-plugin",
-    "version": "1.0.3",
+    "version": "2.0.0-beta.1",
     "keywords": [
         "craft",
         "cms",
@@ -27,8 +27,9 @@
         }
     ],
     "require": {
-        "craftcms/cms": "^3.0.0",
-        "verbb/base": "^1.0.2"
+        "php": "^8.0.2",
+        "craftcms/cms": "^4.0.0-alpha",
+        "verbb/base": "^2.0.0-beta"
     },
     "autoload": {
         "psr-4": {
@@ -38,7 +39,7 @@
     "extra": {
         "name": "Asset Count",
         "handle": "asset-count",
-        "changelogUrl": "https://raw.githubusercontent.com/verbb/asset-count/craft-3/CHANGELOG.md",
+        "changelogUrl": "https://raw.githubusercontent.com/verbb/asset-count/craft-4/CHANGELOG.md",
         "class": "verbb\\assetcount\\AssetCount"
     }
 }

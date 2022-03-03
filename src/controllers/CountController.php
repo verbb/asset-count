@@ -6,18 +6,20 @@ use verbb\assetcount\AssetCount;
 use Craft;
 use craft\web\Controller;
 
+use yii\web\Response;
+
 class CountController extends Controller
 {
     // Properties
     // =========================================================================
 
-    protected $allowAnonymous = true;
+    protected array|int|bool $allowAnonymous = true;
 
 
     // Public Methods
     // =========================================================================
 
-    public function actionIndex()
+    public function actionIndex(): Response
     {
         $assetId = Craft::$app->getRequest()->getRequiredParam('id');
 

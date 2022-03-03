@@ -12,7 +12,7 @@ class AssetCountAsset extends AssetBundle
     // Public Methods
     // =========================================================================
 
-    public function init()
+    public function init(): void
     {
         $this->sourcePath = "@verbb/assetcount/resources/dist";
 

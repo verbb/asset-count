@@ -55,7 +55,7 @@ class Service extends Component
             ->fixedOrder(true);
     }
 
-    public function increment($assetId)
+    public function increment($assetId): void
     {
         if ($this->_ignoreAction()) {
             return;
@@ -77,7 +77,7 @@ class Service extends Component
         $assetCountRecord->save();
     }
 
-    public function reset($assetId)
+    public function reset($assetId): void
     {
         $assetCountRecord = AssetCountRecord::find()
             ->where(['assetId' => $assetId])
@@ -104,15 +104,11 @@ class Service extends Component
         $settings = AssetCount::$plugin->getSettings();
 
         // Check if logged in users should be ignored based on settings
-        if ($settings->ignoreLoggedInUsers AND !Craft::$app->getUser()->getIsGuest()) {
+        if ($settings->ignoreLoggedInUsers && !Craft::$app->getUser()->getIsGuest()) {
             return true;
         }
 
         // Check if ip address should be ignored based on settings
-        if ($settings->ignoreIpAddresses AND in_array(Craft::$app->getRequest()->getUserIP(), explode("\n", $settings->ignoreIpAddresses), true)) {
-            return true;
-        }
-
-        return false;
+        return $settings->ignoreIpAddresses && in_array(Craft::$app->getRequest()->getUserIP(), explode("\n", $settings->ignoreIpAddresses), true);
     }
 }

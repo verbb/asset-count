@@ -6,16 +6,18 @@ use verbb\assetcount\AssetCount;
 use Craft;
 use craft\web\Controller;
 
+use yii\web\Response;
+
 class DefaultController extends Controller
 {
     // Public Methods
     // =========================================================================
 
-    public function actionSettings()
+    public function actionSettings(): Response
     {
         $settings = AssetCount::$plugin->getSettings();
 
-        $this->renderTemplate('asset-count/settings', [
+        return $this->renderTemplate('asset-count/settings', [
             'settings' => $settings,
         ]);
     }
