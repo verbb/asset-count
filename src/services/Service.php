@@ -103,7 +103,7 @@ class Service extends Component
     {
         $settings = AssetCount::$plugin->getSettings();
 
-        // Check if logged in users should be ignored based on settings
+        // Check if logged-in users should be ignored based on settings
         if ($settings->ignoreLoggedInUsers && !Craft::$app->getUser()->getIsGuest()) {
             return true;
         }

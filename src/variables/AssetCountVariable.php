@@ -4,7 +4,6 @@ namespace verbb\assetcount\variables;
 use verbb\assetcount\AssetCount;
 use verbb\assetcount\models\AssetCountModel;
 
-use Craft;
 use craft\elements\db\AssetQuery;
 
 class AssetCountVariable
