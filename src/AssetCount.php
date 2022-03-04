@@ -25,11 +25,11 @@ use yii\base\Event;
 
 class AssetCount extends Plugin
 {
-    // Public Properties
+    // Properties
     // =========================================================================
 
-    public string $schemaVersion = '1.0.0';
     public bool $hasCpSettings = true;
+    public string $schemaVersion = '1.0.0';
 
 
     // Traits
@@ -78,7 +78,7 @@ class AssetCount extends Plugin
         Craft::$app->getView()->registerTwigExtension(new Extension);
     }
 
-    private function _registerVariable(): void 
+    private function _registerVariable(): void
     {
         Event::on(CraftVariable::class, CraftVariable::EVENT_INIT, function(Event $event) {
             $event->sender->set('assetCount', AssetCountVariable::class);

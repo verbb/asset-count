@@ -11,7 +11,7 @@ class AssetCountVariable
 {
     // Public Methods
     // =========================================================================
-    
+
     public function getCount($assetId): AssetCountModel
     {
         return AssetCount::$plugin->getService()->getCount($assetId);

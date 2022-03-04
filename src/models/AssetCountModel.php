@@ -3,16 +3,18 @@ namespace verbb\assetcount\models;
 
 use craft\base\Model;
 
+use DateTime;
+
 class AssetCountModel extends Model
 {
-    // Public Properties
+    // Properties
     // =========================================================================
 
-    public ?string $id = null;
     public ?string $assetId = null;
     public int $count = 0;
-    public ?DateTIme $dateCreated = null;
-    public ?DateTIme $dateUpdated = null;
+    public ?DateTime $dateCreated = null;
+    public ?DateTime $dateUpdated = null;
+    public ?string $id = null;
 
 
     // Public Methods

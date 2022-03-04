@@ -12,10 +12,24 @@ use verbb\base\BaseHelper;
 
 trait PluginTrait
 {
-    // Static Properties
+    // Properties
     // =========================================================================
 
     public static AssetCount $plugin;
+
+
+    // Static Methods
+    // =========================================================================
+
+    public static function error($message): void
+    {
+        Craft::getLogger()->log($message, Logger::LEVEL_ERROR, 'asset-count');
+    }
+
+    public static function log($message): void
+    {
+        Craft::getLogger()->log($message, Logger::LEVEL_INFO, 'asset-count');
+    }
 
 
     // Public Methods
@@ -24,16 +38,6 @@ trait PluginTrait
     public function getService(): Service
     {
         return $this->get('service');
-    }
-
-    public static function log($message): void
-    {
-        Craft::getLogger()->log($message, Logger::LEVEL_INFO, 'asset-count');
-    }
-
-    public static function error($message): void
-    {
-        Craft::getLogger()->log($message, Logger::LEVEL_ERROR, 'asset-count');
     }
 
 
