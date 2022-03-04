@@ -10,43 +10,39 @@
 {% set fullPageForm = true %}
 
 {% block blockContent %}
+    <input type="hidden" name="action" value="plugins/save-plugin-settings">
+    <input type="hidden" name="pluginHandle" value="asset-count">
 
-<input type="hidden" name="action" value="plugins/save-plugin-settings">
-<input type="hidden" name="pluginHandle" value="asset-count">
+    {% namespace 'settings' %}
+        {{ forms.lightswitchField({
+            label: 'Show count on asset index pages' | t('asset-count'),
+            instructions: 'Will add a new column for the asset count on the asset index pages' | t('asset-count'),
+            id: 'showCountOnAssetIndex',
+            name: 'showCountOnAssetIndex',
+            on: settings.showCountOnAssetIndex,
+            errors: settings.getErrors('showCountOnAssetIndex'),
+            warning: macros.configWarning('showCountOnAssetIndex', 'asset-count'),
+        }) }}
 
-{% namespace 'settings' %}
+        {{ forms.lightswitchField({
+            label: 'Ignore logged in users' | t('asset-count'),
+            instructions: 'Only increment counts if users are not logged in' | t('asset-count'),
+            id: 'ignoreLoggedInUsers',
+            name: 'ignoreLoggedInUsers',
+            on: settings.ignoreLoggedInUsers,
+            errors: settings.getErrors('ignoreLoggedInUsers'),
+            warning: macros.configWarning('ignoreLoggedInUsers', 'asset-count'),
+        }) }}
 
-{{ forms.lightswitchField({
-    label: 'Show count on asset index pages' | t('asset-count'),
-    instructions: 'Will add a new column for the asset count on the asset index pages' | t('asset-count'),
-    id: 'showCountOnAssetIndex',
-    name: 'showCountOnAssetIndex',
-    on: settings.showCountOnAssetIndex,
-    errors: settings.getErrors('showCountOnAssetIndex'),
-    warning: macros.configWarning('showCountOnAssetIndex', 'asset-count'),
-}) }}
-
-{{ forms.lightswitchField({
-    label: 'Ignore logged in users' | t('asset-count'),
-    instructions: 'Only increment counts if users are not logged in' | t('asset-count'),
-    id: 'ignoreLoggedInUsers',
-    name: 'ignoreLoggedInUsers',
-    on: settings.ignoreLoggedInUsers,
-    errors: settings.getErrors('ignoreLoggedInUsers'),
-    warning: macros.configWarning('ignoreLoggedInUsers', 'asset-count'),
-}) }}
-
-{{ forms.textareaField({
-    label: 'Ignore IP addresses' | t('asset-count'),
-    instructions: 'Add one IP address per line to ignore them when incrementing counts' | t('asset-count'),
-    id: 'ignoreIpAddresses',
-    name: 'ignoreIpAddresses',
-    value: settings.ignoreIpAddresses,
-    rows: 4,
-    errors: settings.getErrors('ignoreIpAddresses'),
-    warning: macros.configWarning('ignoreIpAddresses', 'asset-count'),
-}) }}
-
-{% endnamespace %}
-
+        {{ forms.textareaField({
+            label: 'Ignore IP addresses' | t('asset-count'),
+            instructions: 'Add one IP address per line to ignore them when incrementing counts' | t('asset-count'),
+            id: 'ignoreIpAddresses',
+            name: 'ignoreIpAddresses',
+            value: settings.ignoreIpAddresses,
+            rows: 4,
+            errors: settings.getErrors('ignoreIpAddresses'),
+            warning: macros.configWarning('ignoreIpAddresses', 'asset-count'),
+        }) }}
+    {% endnamespace %}
 {% endblock %}
