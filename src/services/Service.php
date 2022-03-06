@@ -17,7 +17,7 @@ class Service extends Component
     // Constants
     // =========================================================================
 
-    const EVENT_AFTER_RESET_COUNT = 'afterResetCount';
+    public const EVENT_AFTER_RESET_COUNT = 'afterResetCount';
 
 
     // Public Methods
