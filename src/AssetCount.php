@@ -95,6 +95,7 @@ class AssetCount extends Plugin
 
     private function _registerEventHandlers(): void
     {
+        /* @var Settings $settings */
         $settings = $this->getSettings();
 
         if ($settings->showCountOnAssetIndex) {

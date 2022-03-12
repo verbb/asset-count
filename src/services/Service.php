@@ -3,6 +3,7 @@ namespace verbb\assetcount\services;
 
 use verbb\assetcount\AssetCount;
 use verbb\assetcount\models\AssetCountModel;
+use verbb\assetcount\models\Settings;
 use verbb\assetcount\records\AssetCountRecord;
 
 use Craft;
@@ -101,6 +102,7 @@ class Service extends Component
 
     private function _ignoreAction(): bool
     {
+        /* @var Settings $settings */
         $settings = AssetCount::$plugin->getSettings();
 
         // Check if logged-in users should be ignored based on settings
