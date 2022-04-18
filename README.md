@@ -28,7 +28,7 @@ You'll need to change it to:
 ## Installation
 You can install Asset Count via the plugin store, or through Composer.
 
-### Craft Plugin Store
+## Craft Plugin Store
 To install **Asset Count**, navigate to the _Plugin Store_ section of your Craft control panel, search for `Asset Count`, and click the _Try_ button.
 
 ### Composer
