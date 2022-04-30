@@ -49,9 +49,14 @@ class AssetCount extends Plugin
         $this->_setPluginComponents();
         $this->_setLogging();
         $this->_registerTwigExtensions();
-        $this->_registerCpRoutes();
         $this->_registerVariable();
-        $this->_registerEventHandlers();
+
+        $request = Craft::$app->getRequest();
+
+        if ($request->getIsCpRequest()) {
+            $this->_registerCpRoutes();
+            $this->_registerEventHandlers();
+        }
     }
 
     public function getSettingsResponse(): mixed
