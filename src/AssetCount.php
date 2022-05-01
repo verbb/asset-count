@@ -51,9 +51,7 @@ class AssetCount extends Plugin
         $this->_registerTwigExtensions();
         $this->_registerVariable();
 
-        $request = Craft::$app->getRequest();
-
-        if ($request->getIsCpRequest()) {
+        if (Craft::$app->getRequest()->getIsCpRequest()) {
             $this->_registerCpRoutes();
             $this->_registerEventHandlers();
         }
