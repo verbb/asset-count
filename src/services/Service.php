@@ -4,7 +4,7 @@ namespace verbb\assetcount\services;
 use verbb\assetcount\AssetCount;
 use verbb\assetcount\models\AssetCountModel;
 use verbb\assetcount\models\Settings;
-use verbb\assetcount\records\AssetCountRecord;
+use verbb\assetcount\records\AssetCount as AssetCountRecord;
 
 use Craft;
 use craft\base\Component;

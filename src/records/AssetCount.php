@@ -3,7 +3,7 @@ namespace verbb\assetcount\records;
 
 use craft\db\ActiveRecord;
 
-class AssetCountRecord extends ActiveRecord
+class AssetCount extends ActiveRecord
 {
     // Static Methods
     // =========================================================================
