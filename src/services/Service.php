@@ -2,7 +2,7 @@
 namespace verbb\assetcount\services;
 
 use verbb\assetcount\AssetCount;
-use verbb\assetcount\models\AssetCountModel;
+use verbb\assetcount\models\AssetCount as AssetCountModel;
 use verbb\assetcount\models\Settings;
 use verbb\assetcount\records\AssetCount as AssetCountRecord;
 

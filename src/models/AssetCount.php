@@ -5,7 +5,7 @@ use craft\base\Model;
 
 use DateTime;
 
-class AssetCountModel extends Model
+class AssetCount extends Model
 {
     // Properties
     // =========================================================================

@@ -2,7 +2,7 @@
 namespace verbb\assetcount\variables;
 
 use verbb\assetcount\AssetCount;
-use verbb\assetcount\models\AssetCountModel;
+use verbb\assetcount\models\AssetCount as AssetCountModel;
 
 use craft\elements\db\AssetQuery;
 
