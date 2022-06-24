@@ -25,7 +25,7 @@ class Install extends Migration
 
             $this->addForeignKey(null, '{{%assetcount}}', 'assetId', '{{%elements}}', 'id', 'CASCADE');
 
-            Craft::$app->db->schema->refresh();
+            Craft::$app->getDb()->schema->refresh();
         }
 
         return true;

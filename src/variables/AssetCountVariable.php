@@ -9,7 +9,7 @@ class AssetCountVariable
 {
     // Public Methods
     // =========================================================================
-    
+
     public function getCount($assetId)
     {
         return AssetCount::$plugin->getService()->getCount($assetId);
