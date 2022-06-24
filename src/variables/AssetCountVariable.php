@@ -3,8 +3,6 @@ namespace verbb\assetcount\variables;
 
 use verbb\assetcount\AssetCount;
 
-use Craft;
-
 class AssetCountVariable
 {
     // Public Methods

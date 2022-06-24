@@ -6,7 +6,6 @@ use verbb\assetcount\elements\actions\Reset;
 use verbb\assetcount\models\Settings;
 use verbb\assetcount\twigextensions\Extension;
 use verbb\assetcount\variables\AssetCountVariable;
-use verbb\assetcount\controllers\DefaultController;
 
 use Craft;
 use craft\base\Element;

@@ -1,7 +1,6 @@
 <?php
 namespace verbb\assetcount\base;
 
-use verbb\assetcount\AssetCount;
 use verbb\assetcount\services\Service;
 
 use Craft;

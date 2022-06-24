@@ -1,7 +1,6 @@
 <?php
 namespace verbb\assetcount\twigextensions;
 
-use Craft;
 use craft\elements\Asset;
 use craft\helpers\UrlHelper;
 
@@ -33,7 +32,7 @@ class Extension extends Twig_Extension
         ];
     }
 
-    public function getAssetCountUrl($asset)
+    public function getAssetCountUrl($asset): string
     {
         if (!$asset || !is_a($asset, Asset::class) || !$asset->url) {
             return '';
