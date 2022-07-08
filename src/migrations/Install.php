@@ -3,6 +3,7 @@ namespace verbb\assetcount\migrations;
 
 use Craft;
 use craft\db\Migration;
+use craft\helpers\MigrationHelper;
 
 class Install extends Migration
 {
@@ -10,6 +11,23 @@ class Install extends Migration
     // =========================================================================
 
     public function safeUp(): bool
+    {
+        $this->createTables();
+        $this->createIndexes();
+        $this->addForeignKeys();
+
+        return true;
+    }
+
+    public function safeDown(): bool
+    {
+        $this->dropForeignKeys();
+        $this->dropTables();
+
+        return true;
+    }
+
+    public function createTables(): void
     {
         $this->archiveTableIfExists('{{%assetcount}}');
         $this->createTable('{{%assetcount}}', [
@@ -20,17 +38,27 @@ class Install extends Migration
             'dateUpdated' => $this->dateTime()->notNull(),
             'uid' => $this->uid(),
         ]);
-
-        $this->createIndex(null, '{{%assetcount}}', 'assetId', true);
-        $this->addForeignKey(null, '{{%assetcount}}', 'assetId', '{{%elements}}', 'id', 'CASCADE');
-
-        return true;
     }
 
-    public function safeDown(): bool
+    public function createIndexes(): void
+    {
+        $this->createIndex(null, '{{%assetcount}}', 'assetId', true);
+    }
+
+    public function addForeignKeys(): void
+    {
+        $this->addForeignKey(null, '{{%assetcount}}', 'assetId', '{{%elements}}', 'id', 'CASCADE');
+    }
+
+    public function dropTables(): void
     {
         $this->dropTableIfExists('{{%assetcount}}');
+    }
 
-        return true;
+    public function dropForeignKeys(): void
+    {
+        if ($this->db->tableExists('{{%assetcount}}')) {
+            MigrationHelper::dropAllForeignKeysOnTable('{{%assetcount}}', $this);
+        }
     }
 }
