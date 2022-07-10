@@ -1,10 +1,13 @@
 # Changelog
 
-## 2.0.0-beta.1 - 2022-03-10
+## 2.0.0 - 2022-07-10
 
 ### Changed
-- Now requires PHP `^8.0.2`.
-- Now requires Craft `^4.0.0-beta.1`.
+- Now requires PHP `8.0.2+`.
+- Now requires Craft `4.0.0+`.
+
+### Fixed
+- Fix an error when uninstalling.
 
 ## 1.0.3 - 2020-11-18
 
