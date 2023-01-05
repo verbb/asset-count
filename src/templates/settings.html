@@ -1,6 +1,9 @@
 {% extends 'asset-count/_layouts' %}
+
 {% import '_includes/forms' as forms %}
 {% import 'verbb-base/_macros' as macros %}
+
+{% requireAdmin %}
 
 {% set crumbs = [
     { label: 'Asset Count' | t('asset-count'), url: url('asset-count') },
