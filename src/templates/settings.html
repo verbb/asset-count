@@ -19,7 +19,7 @@
     {% namespace 'settings' %}
         {{ forms.lightswitchField({
             label: 'Show count on asset index pages' | t('asset-count'),
-            instructions: 'Will add a new column for the asset count on the asset index pages' | t('asset-count'),
+            instructions: 'Will add a new column for the asset count on the asset index pages.' | t('asset-count'),
             id: 'showCountOnAssetIndex',
             name: 'showCountOnAssetIndex',
             on: settings.showCountOnAssetIndex,
@@ -29,7 +29,7 @@
 
         {{ forms.lightswitchField({
             label: 'Ignore logged in users' | t('asset-count'),
-            instructions: 'Only increment counts if users are not logged in' | t('asset-count'),
+            instructions: 'Only increment counts if users are not logged in.' | t('asset-count'),
             id: 'ignoreLoggedInUsers',
             name: 'ignoreLoggedInUsers',
             on: settings.ignoreLoggedInUsers,
@@ -39,7 +39,7 @@
 
         {{ forms.textareaField({
             label: 'Ignore IP addresses' | t('asset-count'),
-            instructions: 'Add one IP address per line to ignore them when incrementing counts' | t('asset-count'),
+            instructions: 'Add one IP address per line to ignore them when incrementing counts.' | t('asset-count'),
             id: 'ignoreIpAddresses',
             name: 'ignoreIpAddresses',
             value: settings.ignoreIpAddresses,

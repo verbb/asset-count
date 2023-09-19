@@ -1,59 +1,22 @@
-# Asset Count for Craft CMS
+# Asset Count plugin for Craft CMS
+<img width="500" src="https://verbb.imgix.net/plugins/asset-count/asset-count-social-card.png?v=1">
 
-A Craft CMS plugin that allows you to count and display the number of times that an asset has been viewed.
+Asset Count is a Craft CMS plugin that counts and displays the number of times that an asset has been viewed.
 
-In order to count a directly accessed Asset, you will need to alter the `url` that the asset points to. This is so that the view is tracked before presenting the user with the original asset as intended.
+## Documentation
+Visit the [Asset Count Plugin page](https://verbb.io/craft-plugins/asset-count) for all documentation, guides, pricing and developer resources.
 
-So, instead of a link to the asset such as:
+## Credit & Thanks
+Thanks to [Ben Croker](https://github.com/putyourlightson) for the [Entry Count Plugin](https://github.com/putyourlightson/craft-entry-count).
 
-```
-<a href="{{ file.url }}" target="_blank"></a>
-```
+## Support
+Get in touch with us via the [Asset Count Support page](https://verbb.io/craft-plugins/asset-count/support) or by [creating a Github issue](https://github.com/verbb/asset-count/issues)
 
-You'll need to change it to:
-
-```
-{% set file = craft.assets.id(1234).one() %}
-
-<a href="{{ actionUrl('asset-count/count', { id: file.id }) }}" target="_blank"></a>
-
-// Or with Twig filter
-<a href="{{ file | asset_count }}" target="_blank"></a>
-
-// Or with Twig function
-<a href="{{ asset_count(file) }}" target="_blank"></a>
-
-```
-
-## Installation
-You can install Asset Count via the plugin store, or through Composer.
-
-### Craft Plugin Store
-To install **Asset Count**, navigate to the _Plugin Store_ section of your Craft control panel, search for `Asset Count`, and click the _Try_ button.
-
-### Composer
-You can also add the package to your project using Composer and the command line.
-
-1. Open your terminal and go to your Craft project:
-```shell
-cd /path/to/project
-```
-
-2. Then tell Composer to require the plugin, and Craft to install it:
-```shell
-composer require verbb/asset-count && php craft plugin/install asset-count
-```
-
-## Show your Support
-
+## Sponsor
 Asset Count is licensed under the MIT license, meaning it will always be free and open source – we love free stuff! If you'd like to show your support to the plugin regardless, [Sponsor](https://github.com/sponsors/verbb) development.
 
 <h2></h2>
 
 <a href="https://verbb.io" target="_blank">
-  <img width="100" src="https://verbb.io/assets/img/verbb-pill.svg">
+    <img width="100" src="https://verbb.io/assets/img/verbb-pill.svg">
 </a>
-
-## Credit & Thanks
-
-Thanks to [Ben Croker](https://github.com/putyourlightson) for the [Entry Count Plugin](https://github.com/putyourlightson/craft-entry-count).
