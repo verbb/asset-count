@@ -12,10 +12,10 @@ use craft\base\Element;
 use craft\base\Model;
 use craft\base\Plugin;
 use craft\elements\Asset;
+use craft\events\DefineAttributeHtmlEvent;
 use craft\events\RegisterElementActionsEvent;
 use craft\events\RegisterElementTableAttributesEvent;
 use craft\events\RegisterUrlRulesEvent;
-use craft\events\SetElementTableAttributeHtmlEvent;
 use craft\helpers\UrlHelper;
 use craft\web\UrlManager;
 use craft\web\twig\variables\CraftVariable;
@@ -46,8 +46,6 @@ class AssetCount extends Plugin
 
         self::$plugin = $this;
 
-        $this->_registerComponents();
-        $this->_registerLogTarget();
         $this->_registerTwigExtensions();
         $this->_registerVariable();
 
@@ -106,7 +104,7 @@ class AssetCount extends Plugin
                 $event->tableAttributes['count'] = ['label' => Craft::t('asset-count', 'View Count')];
             });
 
-            Event::on(Asset::class, Element::EVENT_SET_TABLE_ATTRIBUTE_HTML, function(SetElementTableAttributeHtmlEvent $event) {
+            Event::on(Asset::class, Element::EVENT_DEFINE_ATTRIBUTE_HTML, function(DefineAttributeHtmlEvent $event) {
                 if ($event->attribute === 'count') {
                     $asset = $event->sender;
 

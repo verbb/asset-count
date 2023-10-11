@@ -18,6 +18,7 @@
 
     {% namespace 'settings' %}
         {{ forms.lightswitchField({
+            first: true,
             label: 'Show count on asset index pages' | t('asset-count'),
             instructions: 'Will add a new column for the asset count on the asset index pages.' | t('asset-count'),
             id: 'showCountOnAssetIndex',
