@@ -2,7 +2,7 @@
     "name": "verbb/asset-count",
     "description": "Track the number of views for assets.",
     "type": "craft-plugin",
-    "version": "1.0.3",
+    "version": "1.0.4",
     "keywords": [
         "craft",
         "cms",

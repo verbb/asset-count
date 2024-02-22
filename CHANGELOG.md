@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.0.4 - 2024-02-23
+
+### Fixed
+- Fix not throwing a 404 not found error when counting an asset that doesn't exist.
+
 ## 1.0.3 - 2020-11-18
 
 ### Fixed
