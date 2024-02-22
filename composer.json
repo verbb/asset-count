@@ -2,7 +2,7 @@
     "name": "verbb/asset-count",
     "description": "Track the number of views for assets.",
     "type": "craft-plugin",
-    "version": "2.0.1",
+    "version": "2.0.2",
     "keywords": [
         "craft",
         "cms",
@@ -33,7 +33,7 @@
     },
     "autoload": {
         "psr-4": {
-          "verbb\\assetcount\\": "src/"
+            "verbb\\assetcount\\": "src/"
         }
     },
     "extra": {
