@@ -97,7 +97,7 @@ class Service extends Component
     }
 
 
-    // Private methods
+    // Private Methods
     // =========================================================================
 
     private function _ignoreAction(): bool
