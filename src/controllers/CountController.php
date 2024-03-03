@@ -6,6 +6,7 @@ use verbb\assetcount\AssetCount;
 use Craft;
 use craft\web\Controller;
 
+use yii\web\NotFoundHttpException;
 use yii\web\Response;
 
 class CountController extends Controller
@@ -22,10 +23,13 @@ class CountController extends Controller
     public function actionIndex(): Response
     {
         $assetId = Craft::$app->getRequest()->getRequiredParam('id');
+        $asset = Craft::$app->getAssets()->getAssetById($assetId);
+
+        if (!$asset || !$asset->url) {
+            throw new NotFoundHttpException();
+        }
 
         AssetCount::$plugin->getService()->increment($assetId);
-
-        $asset = Craft::$app->getAssets()->getAssetById($assetId);
 
         return $this->redirect($asset->url);
     }
