@@ -1,5 +1,5 @@
-# Asset Count plugin for Craft CMS
-<img width="500" src="https://verbb.imgix.net/plugins/asset-count/asset-count-social-card.png?v=1">
+<p align="center"><img src="https://verbb.imgix.net/plugins/asset-count/asset-count-icon.svg" width="100" height="100" alt="Asset Count icon"></p>
+<h1 align="center">Asset Count for Craft CMS</h1>
 
 Asset Count is a Craft CMS plugin that counts and displays the number of times that an asset has been viewed.
 
