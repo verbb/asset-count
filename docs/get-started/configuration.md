@@ -11,6 +11,7 @@ return [
         'showCountOnAssetIndex' => true,
         'ignoreIpAddresses' => false,
         'ignoreLoggedInUsers' => false,
+        'ignoreBots' => false,
     ],
 ];
 ```
@@ -19,6 +20,7 @@ return [
 - `showCountOnAssetIndex` - Will add a new column for the asset count on the asset index pages.
 - `ignoreIpAddresses` - Add one IP address per line to ignore them when incrementing counts.
 - `ignoreLoggedInUsers` - Only increment counts if users are not logged in.
+- `ignoreBots` - Only increment counts if the request does not appear to be from a bot, crawler or spider.
 
 ## Control Panel
 You can also manage configuration settings through the Control Panel by visiting Settings → Asset Count.

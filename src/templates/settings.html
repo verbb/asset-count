@@ -38,6 +38,16 @@
             warning: macros.configWarning('ignoreLoggedInUsers', 'asset-count'),
         }) }}
 
+        {{ forms.lightswitchField({
+            label: 'Ignore bots' | t('asset-count'),
+            instructions: 'Only increment counts if the request does not appear to be from a bot, crawler or spider.' | t('asset-count'),
+            id: 'ignoreBots',
+            name: 'ignoreBots',
+            on: settings.ignoreBots,
+            errors: settings.getErrors('ignoreBots'),
+            warning: macros.configWarning('ignoreBots', 'asset-count'),
+        }) }}
+
         {{ forms.textareaField({
             label: 'Ignore IP addresses' | t('asset-count'),
             instructions: 'Add one IP address per line to ignore them when incrementing counts.' | t('asset-count'),

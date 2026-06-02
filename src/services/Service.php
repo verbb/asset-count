@@ -11,6 +11,8 @@ use craft\base\Component;
 use craft\elements\db\AssetQuery;
 use craft\elements\Asset;
 
+use Jaybizzle\CrawlerDetect\CrawlerDetect;
+
 use yii\base\Event;
 
 class Service extends Component
@@ -107,6 +109,11 @@ class Service extends Component
 
         // Check if logged-in users should be ignored based on settings
         if ($settings->ignoreLoggedInUsers && !Craft::$app->getUser()->getIsGuest()) {
+            return true;
+        }
+
+        // Check if bots should be ignored based on settings
+        if ($settings->ignoreBots && (new CrawlerDetect())->isCrawler()) {
             return true;
         }
 

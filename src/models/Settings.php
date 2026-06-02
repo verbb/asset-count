@@ -8,6 +8,7 @@ class Settings extends Model
     // Properties
     // =========================================================================
 
+    public bool $ignoreBots = false;
     public bool $ignoreIpAddresses = false;
     public bool $ignoreLoggedInUsers = false;
     public bool $showCountOnAssetIndex = true;
