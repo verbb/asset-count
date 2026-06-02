@@ -5,7 +5,7 @@ return [
   'Asset Count' => 'Asset Count',
   'Asset count reset.' => 'Asset count reset.',
   'Asset Count Successfully Reset' => 'Asset Count Successfully Reset',
-  'Ignore bots' => 'Ignore bots',
+  'Ignore Bots' => 'Ignore Bots',
   'Ignore IP addresses' => 'Ignore IP addresses',
   'Ignore logged in users' => 'Ignore logged in users',
   'Only increment counts if users are not logged in.' => 'Only increment counts if users are not logged in.',
