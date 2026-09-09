@@ -18,7 +18,7 @@ class DefaultController extends Controller
         /* @var Settings $settings */
         $settings = AssetCount::$plugin->getSettings();
 
-        return $this->renderTemplate('asset-count/settings', [
+        return $this->renderTemplate('asset-count/settings/index', [
             'settings' => $settings,
         ]);
     }
