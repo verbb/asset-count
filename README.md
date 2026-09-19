@@ -3,6 +3,8 @@
 
 Asset Count is a Craft CMS plugin that counts and displays the number of times that an asset has been viewed.
 
+Optional exclusions keep signed-in users, nominated IP addresses, bots, crawlers and spiders from inflating those counts.
+
 ## Documentation
 Visit the [Asset Count Plugin page](https://verbb.io/craft-plugins/asset-count) for all documentation, guides, pricing and developer resources.
 
