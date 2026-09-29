@@ -1,9 +1,18 @@
 <p align="center"><img src="https://assets.verbb.io/plugins/asset-count/asset-count-icon.svg" width="100" height="100" alt="Asset Count icon"></p>
 <h1 align="center">Asset Count for Craft CMS</h1>
 
-Asset Count is a Craft CMS plugin that counts and displays the number of times that an asset has been viewed.
+Asset Count is a Craft CMS plugin that shows which downloadable assets people actually use. Send visitors through a tracked asset URL, keep the original file delivery intact, and bring the resulting totals back into Craft.
 
-Optional exclusions keep signed-in users, nominated IP addresses, bots, crawlers and spiders from inflating those counts.
+Generate a tracked URL for any Craft asset and use it wherever you offer a download. Each visit is counted before the visitor is redirected to the original file, so your templates stay in control of the surrounding experience.
+
+## Features
+
+- Wrap an existing asset in a countable URL without moving or duplicating the file.
+- Show download counts in Craft or retrieve them in Twig alongside the asset.
+- Keep likely crawlers from inflating totals when bot detection is enabled.
+- Ignore signed-in visitors or nominated IP addresses when required.
+- Reset an asset's count from the control panel when a campaign or reporting period changes.
+- Manage the counting rules in plugin settings or project configuration.
 
 ## Documentation
 Visit the [Asset Count Plugin page](https://verbb.io/craft-plugins/asset-count) for all documentation, guides, pricing and developer resources.
@@ -15,7 +24,7 @@ Thanks to [Ben Croker](https://github.com/putyourlightson) for the [Entry Count 
 Get in touch with us via the [Asset Count Support page](https://verbb.io/craft-plugins/asset-count/support) or by [creating a Github issue](https://github.com/verbb/asset-count/issues)
 
 ## Sponsor
-Asset Count is licensed under the MIT license, meaning it will always be free and open source – we love free stuff! If you'd like to show your support to the plugin regardless, [Sponsor](https://github.com/sponsors/verbb) development.
+Asset Count is licensed under the MIT license, meaning it will always be free and open source - we love free stuff! If you'd like to show your support to the plugin regardless, [Sponsor](https://github.com/sponsors/verbb) development.
 
 <h2></h2>
 
