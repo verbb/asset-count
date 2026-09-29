@@ -1,6 +1,6 @@
 {
     "name": "verbb/asset-count",
-    "description": "Track the number of views for assets.",
+    "description": "A Craft CMS plugin for tracking asset views and downloads.",
     "type": "craft-plugin",
     "version": "3.0.4",
     "keywords": [
