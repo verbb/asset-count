@@ -2,6 +2,7 @@
 namespace verbb\assetcount\services;
 
 use verbb\assetcount\AssetCount;
+use verbb\assetcount\events\ResetCountEvent;
 use verbb\assetcount\models\AssetCount as AssetCountModel;
 use verbb\assetcount\models\Settings;
 use verbb\assetcount\records\AssetCount as AssetCountRecord;
@@ -12,8 +13,6 @@ use craft\elements\db\AssetQuery;
 use craft\elements\Asset;
 
 use Jaybizzle\CrawlerDetect\CrawlerDetect;
-
-use yii\base\Event;
 
 class Service extends Component
 {
@@ -92,7 +91,7 @@ class Service extends Component
 
         // Fire a 'afterResetCount' event
         if ($this->hasEventHandlers(self::EVENT_AFTER_RESET_COUNT)) {
-            $this->trigger(self::EVENT_AFTER_RESET_COUNT, new Event([
+            $this->trigger(self::EVENT_AFTER_RESET_COUNT, new ResetCountEvent([
                 'assetId' => $assetId,
             ]));
         }

@@ -4,6 +4,7 @@
 
 ### Fixed
 - Fixed a low-severity access control and CSRF vulnerability.
+- Fix an error when resetting asset counts with an `afterResetCount` event listener attached.
 
 ## 3.0.5 - 2026-09-30
 
