@@ -72,7 +72,7 @@ class Service extends Component
         if ($assetCountRecord) {
             $assetCountRecord->setAttribute('count', $assetCountRecord->getAttribute('count') + 1);
         } else {
-            $assetCountRecord = new AssetCountRecord;
+            $assetCountRecord = new AssetCountRecord();
             $assetCountRecord->setAttribute('assetId', $assetId);
             $assetCountRecord->setAttribute('count', 1);
         }
