@@ -1,5 +1,10 @@
 # Changelog
 
+## Unreleased
+
+### Fixed
+- Fixed a low-severity access control and CSRF vulnerability.
+
 ## 3.0.5 - 2026-09-30
 
 ### Changed
