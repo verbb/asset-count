@@ -1,10 +1,10 @@
 <?php
-namespace verbb\assetcount\assetbundles;
+namespace verbb\assetcount\web\assets\cp;
 
 use craft\web\AssetBundle;
 use craft\web\assets\cp\CpAsset;
 
-use verbb\base\assetbundles\CpAsset as VerbbCpAsset;
+use verbb\base\web\assets\cp\CpAsset as VerbbCpAsset;
 
 class AssetCountAsset extends AssetBundle
 {
@@ -13,8 +13,6 @@ class AssetCountAsset extends AssetBundle
 
     public function init(): void
     {
-        $this->sourcePath = "@verbb/assetcount/resources/dist";
-
         $this->depends = [
             VerbbCpAsset::class,
             CpAsset::class,

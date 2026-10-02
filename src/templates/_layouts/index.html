@@ -1,6 +1,6 @@
 {% extends parentLayout ?? '_layouts/cp' %}
 
-{% do view.registerAssetBundle('verbb\\assetcount\\assetbundles\\AssetCountAsset') %}
+{% do view.registerAssetBundle('verbb\\assetcount\\web\\assets\\cp\\AssetCountAsset') %}
 
 {% if title is not defined %}
     {% set title = 'Asset Count' | t('asset-count') %}

@@ -4,7 +4,7 @@ namespace verbb\assetcount;
 use verbb\assetcount\base\PluginTrait;
 use verbb\assetcount\elements\actions\Reset;
 use verbb\assetcount\models\Settings;
-use verbb\assetcount\twigextensions\Extension;
+use verbb\assetcount\web\twig\Extension;
 use verbb\assetcount\variables\AssetCountVariable;
 
 use Craft;

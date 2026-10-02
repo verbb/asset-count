@@ -1,5 +1,5 @@
 <?php
-namespace verbb\assetcount\twigextensions;
+namespace verbb\assetcount\web\twig;
 
 use craft\elements\Asset;
 use craft\helpers\UrlHelper;
