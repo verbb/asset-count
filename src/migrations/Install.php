@@ -3,7 +3,6 @@ namespace verbb\assetcount\migrations;
 
 use Craft;
 use craft\db\Migration;
-use craft\helpers\MigrationHelper;
 
 class Install extends Migration
 {
@@ -58,7 +57,7 @@ class Install extends Migration
     public function dropForeignKeys(): void
     {
         if ($this->db->tableExists('{{%assetcount}}')) {
-            MigrationHelper::dropAllForeignKeysOnTable('{{%assetcount}}', $this);
+            $this->dropForeignKeyIfExists('{{%assetcount}}', 'assetId');
         }
     }
 }
