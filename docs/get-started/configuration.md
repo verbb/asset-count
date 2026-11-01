@@ -27,7 +27,7 @@ Will add a new column for the asset count on the asset index pages.
 ::: reference
 ### `ignoreIpAddresses`
 
-**Type:** `bool` · **Default:** `false`
+**Type:** `string` · **Default:** `''`
 
 Add one IP address per line to ignore them when incrementing counts.
 :::

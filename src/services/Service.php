@@ -117,6 +117,13 @@ class Service extends Component
         }
 
         // Check if ip address should be ignored based on settings
-        return $settings->ignoreIpAddresses && in_array(Craft::$app->getRequest()->getUserIP(), explode("\n", $settings->ignoreIpAddresses), true);
+        if (!$settings->ignoreIpAddresses) {
+            return false;
+        }
+
+        // Textarea input can contain any line-ending style and surrounding whitespace
+        $ipAddresses = array_filter(array_map('trim', preg_split('/\R/', $settings->ignoreIpAddresses)));
+
+        return in_array(Craft::$app->getRequest()->getUserIP(), $ipAddresses, true);
     }
 }
