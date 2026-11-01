@@ -1,6 +1,6 @@
 # Changelog
 
-## Unreleased
+## 3.0.9 - 2026-11-01
 
 ### Fixed
 - Fix the “Ignore IP addresses” setting not saving its IP addresses, so downloads from ignored IPs were still counted.
