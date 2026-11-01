@@ -22,8 +22,8 @@ class CountController extends Controller
 
     public function actionIndex(): Response
     {
-        $assetId = Craft::$app->getRequest()->getRequiredParam('id');
-        $asset = Craft::$app->getAssets()->getAssetById($assetId);
+        $assetId = filter_var(Craft::$app->getRequest()->getRequiredParam('id'), FILTER_VALIDATE_INT);
+        $asset = $assetId ? Craft::$app->getAssets()->getAssetById($assetId) : null;
 
         if (!$asset || !$asset->url) {
             throw new NotFoundHttpException();

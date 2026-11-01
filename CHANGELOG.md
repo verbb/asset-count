@@ -4,6 +4,7 @@
 
 ### Fixed
 - Fix the “Ignore IP addresses” setting not saving its IP addresses, so downloads from ignored IPs were still counted.
+- Fixed the asset count action returning a server error instead of a 404 for a non-numeric asset ID.
 
 ## 3.0.8 - 2026-10-15
 
