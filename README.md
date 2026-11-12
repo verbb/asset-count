@@ -15,16 +15,20 @@ Generate a tracked URL for any Craft asset and use it wherever you offer a downl
 - Manage the counting rules in plugin settings or project configuration.
 
 ## Documentation
+
 Visit the [Asset Count Plugin page](https://verbb.io/craft-plugins/asset-count) for all documentation, guides, pricing and developer resources.
 
 ## Credit & Thanks
+
 Thanks to [Ben Croker](https://github.com/putyourlightson) for the [Entry Count Plugin](https://github.com/putyourlightson/craft-entry-count).
 
 ## Support
-Get in touch with us via the [Asset Count Support page](https://verbb.io/craft-plugins/asset-count/support) or by [creating a Github issue](https://github.com/verbb/asset-count/issues)
+
+Get in touch with us via the [Asset Count Support page](https://verbb.io/craft-plugins/asset-count/support) or by [creating a GitHub issue](https://github.com/verbb/asset-count/issues).
 
 ## Sponsor
-Asset Count is licensed under the MIT license, meaning it will always be free and open source - we love free stuff! If you'd like to show your support to the plugin regardless, [Sponsor](https://github.com/sponsors/verbb) development.
+
+Asset Count is licensed under the MIT license, so it will always be free and open source. If you'd like to support it anyway, you can [sponsor its development](https://github.com/sponsors/verbb).
 
 <h2></h2>
 

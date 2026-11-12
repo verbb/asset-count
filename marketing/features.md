@@ -18,5 +18,5 @@ Generate a tracked URL for any Craft asset and use it wherever you offer a downl
 <!-- feature-section -->
 ## Cleaner download counts
 
-Exclude known IP addresses, signed-in users, or likely bots when those requests should not affect the total.
+Exclude known IP addresses, signed-in users, or likely bots when those requests should not affect the total, so the numbers reflect real interest instead of your own testing or crawler traffic.
 <!-- feature-section-end -->
