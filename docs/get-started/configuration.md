@@ -12,7 +12,7 @@ return [
 ];
 ```
 
-All other settings keep their defaults. Add any further settings you want to change to the same array. The options below explain the available settings and their defaults.
+All other settings keep their defaults. Add any further settings you want to change to the same array. The options below explain the available settings and their defaults. You can also manage these settings in the control panel under **Settings → Asset Count**.
 
 ## Configuration Options
 
@@ -47,7 +47,3 @@ Only increment counts if users are not logged in.
 
 Only increment counts if the request does not appear to be from a bot, crawler or spider.
 :::
-
-
-## Control Panel
-You can also manage configuration settings through the Control Panel by visiting Settings → Asset Count.
