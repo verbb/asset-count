@@ -21,5 +21,12 @@
         "children": [
             "template-guides/tracking-asset-views"
         ]
+    },
+    {
+        "title": "Developers",
+        "collapsable": false,
+        "children": [
+            "developers/events"
+        ]
     }
 ]
